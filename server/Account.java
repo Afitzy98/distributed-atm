@@ -64,11 +64,11 @@ public class Account {
   public void addTransaction(Transaction t) {
     switch (t.getTransactionType()) {
       case WITHDRAW:
-        balance.minus(t.getAmount());
+        this.balance = balance.minus(t.getAmount());
         break;
 
       case DEPOSIT:
-        balance.plus(t.getAmount());
+        this.balance = balance.plus(t.getAmount());
         break;
 
       default:

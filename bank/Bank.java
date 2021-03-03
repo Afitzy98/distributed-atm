@@ -10,11 +10,11 @@ public interface Bank extends Remote {
     // be passed to the other methods as a session identifier
     public long login(String username, String password) throws RemoteException, InvalidLogin;
 
-    public void deposit(int accountnum, Money amount, long sessionID) throws RemoteException, InvalidSession;
+    public void deposit(int accountNum, Money amount, long sessionID) throws RemoteException, InvalidSession;
 
-    public void withdraw(int accountnum, Money amount, long sessionID) throws RemoteException, InvalidSession;
+    public void withdraw(int accountNum, Money amount, long sessionID) throws RemoteException, InvalidSession;
 
-    public Money getBalance(int accountnum, long sessionID) throws RemoteException, InvalidSession;
+    public Money getBalance(int accountNum, long sessionID) throws RemoteException, InvalidSession;
 
     public Statement getStatement(int accountNum, Date from, Date to, long sessionID)
             throws RemoteException, InvalidSession;
